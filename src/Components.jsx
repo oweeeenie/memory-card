@@ -1,11 +1,11 @@
 import Header from "./Header";
-import Memorycard from "./Memorycard";
+import PokemonApi from "./PokemonApi";
 
 export default function Components() {
   return (
     <>
       <Header />
-      <Memorycard />
+      <PokemonApi />
     </>
   );
 }
