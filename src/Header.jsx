@@ -1,21 +1,4 @@
-import { useState } from "react";
-import PokemonApi from "./PokemonApi";
-
-function Header() {
-  const [score, setScore] = useState(0);
-  const [bestScore, setBestScore] = useState(0);
-  const [clickedPokemon, setClickedPokemon] = useState([]);
-
-  function Game() {
-    if (!clickedPokemon.includes()) {
-      setScore(score);
-      setClickedPokemon(clickedPokemon);
-    } else {
-      let newScore = setScore(score + 1);
-      let newBestScore = setBestScore(bestScore + 1);
-    }
-  }
-
+function Header({ score, bestScore }) {
   return (
     <>
       <div className='header-container flex justify-between p-4 text-[var(--main-text)]'>
@@ -27,8 +10,8 @@ function Header() {
           </p>
         </div>
         <div className='right-header'>
-          <p className='best-score'>Best Score: 4</p>
-          <p className='score'>Score: 1</p>
+          <p className='best-score'>Best Score: {bestScore}</p>
+          <p className='score'>Score: {score}</p>
         </div>
       </div>
     </>
